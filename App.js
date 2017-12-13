@@ -13,22 +13,22 @@ import MainScreen from './app/containers/MainContainer'
 import ListScreen from './app/containers/ListContainer'
 import ProfileScreen from './app/containers/ProfileContainer'
 import StoreScreen from './app/containers/StoreScreen'
-import SnackScreen from './app/containers/SnackContainer'
+import BagScreen from './app/containers/BagScreen'
 
 export const DrawerScreenNavigator =  DrawerNavigator(
   {
     Main: {
       screen: MainScreen,
     },
-    Beverages: {
+    Store: {
       screen: StoreScreen,
       navigationOptions: {
         drawerLabel: 'Store',
         drawerIcon: () => <Icon name="store" size={24} />
       },
     },
-    Snacks: {
-      screen: SnackScreen,
+    Bag: {
+      screen: BagScreen,
       navigationOptions: {
         drawerLabel: 'Basket',
         drawerIcon: () => <Icon name="add-shopping-cart" size={24} />
@@ -81,6 +81,12 @@ export const AppNavigator = StackNavigator (
         title: 'CHAI KI CHUSKI',
       },
     },
+    // OrderSummary: {
+    //   screen: OrderSummaryScreen,
+    //   navigationOptions: {
+    //     title: 'ORDER SUMMARY'
+    //   }
+    // }
   }
 )
 

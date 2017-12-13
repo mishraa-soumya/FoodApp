@@ -23,23 +23,18 @@ class StoreScreen extends Component{
     })
 
     componentDidMount(){
-        // console.log("Component mounted");
-        // console.log("props => " + this.props);
         this.getStoreList();
     }
 
     getStoreList(){
-
-      // console.log("api request");
       let self = this , apiUrl = 'https://my-json-server.typicode.com/soumya18/DemoApis/db';
       ApiCall({
         url: apiUrl,
         type: 'GET',
         "Content-Type": "application/json",
         success(responseData){
-          // console.log(`Success Data is ${JSON.stringify(responseData)}`);
-          if(responseData.data.length > 0){
-            self.props.storeList(responseData);
+          if(responseData.store.length > 0){
+            self.props.storeList(responseData.store);
           }
         },
         error(error) {

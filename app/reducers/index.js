@@ -12,11 +12,13 @@ import { combineReducers } from 'redux';
 import { navReducer } from '../../App';
 import homePageData from './homePage'
 import storeData from './storeData'
+import bagData from './BagData'
 
 const rootReducer = combineReducers({
     nav: navReducer,
     homePageData,
-    storeData
+    storeData,
+    bagData
 });
 
 export default rootReducer;
